@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>PETA KLASIFIKASI SAWAH KABUPATEN KEBUMEN</title>
+
+		<link rel="stylesheet" type="text/css" href="javascript/style.css" />
+		<link rel="stylesheet" type="text/css" href="leaflet/leaflet.css"/>
+
+		<script type="text/javascript" src="leaflet/leaflet.js"></script>
+		<script type="text/javascript" src="javascript/tab.js"></script>
+
+		<!-- Caminhos paras os dados das camadas -->
+		<script type="text/javascript" src="data/_JALAN_LN_25K.js"></script>
+		<script type="text/javascript" src="data/_lbs_clip.js"></script>
+		<script type="text/javascript" src="data/_LapakGIS_Batas_Kecamatan_2024.js"></script>
+	</head>
+	<body>
+		<div class="title">
+			<h1>PETA KLASIFIKASI SAWAH KABUPATEN KEBUMEN</h1>
+		</div>
+		<div class="maintab">
+			<button id="mapBtn" class="mainTablinks" onclick="openMainTab(event, 'mapArea')">Mapa</button>
+			<button class="mainTablinks" onclick="openMainTab(event, 'attributesArea')">Tabelas de Atributos</button>
+		</div>
+		<div id="mapArea" class="mainTabContent">
+			<div id="map"></div>
+		</div>
+
+		<div id="attributesArea" class="mainTabContent">
+			<div class="tab">
+				<button id="_JALAN_LN_25K_btn" class="tablinks" onclick="openTab(event, '_JALAN_LN_25K_tab')">JALAN_LN_25K</button>
+				<button id="_lbs_clip_btn" class="tablinks" onclick="openTab(event, '_lbs_clip_tab')">lbs_clip</button>
+				<button id="_LapakGIS_Batas_Kecamatan_2024_btn" class="tablinks" onclick="openTab(event, '_LapakGIS_Batas_Kecamatan_2024_tab')">LapakGIS_Batas_Kecamatan_2024</button>
+			</div>
+			<div id="_JALAN_LN_25K_tab" class="tabcontent"></div>
+			<div id="_lbs_clip_tab" class="tabcontent"></div>
+			<div id="_LapakGIS_Batas_Kecamatan_2024_tab" class="tabcontent"></div>
+		</div>
+		<script type="text/javascript" src="javascript/map.js"></script>
+		<script type="text/javascript" src="javascript/attributes.js"></script>
+		<script>document.getElementById('mapBtn').click();</script>	</body>
+</html>
